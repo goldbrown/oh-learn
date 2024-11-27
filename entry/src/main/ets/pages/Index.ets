@@ -38,6 +38,19 @@ struct Index {
         top: { anchor: 'SecondPage', align: VerticalAlign.Bottom },
         middle: { anchor: 'SecondPage', align: HorizontalAlign.Center }
       })
+
+      Button('跳转AI组件').id("AiPage").fontSize(50).onClick(() => {
+        router.pushUrl({
+          "url":"pages/AiService",
+          "params": {
+            "src": "data from index"
+          }
+        });
+      }).alignRules({
+        top: { anchor: 'NormalPage', align: VerticalAlign.Bottom },
+        middle: { anchor: 'NormalPage', align: HorizontalAlign.Center }
+      })
+
     }
     .height('100%')
     .width('100%')
